@@ -1,0 +1,20 @@
+Entidades:
+
+-Colaborador
+-Rol
+-Producto
+-Proveedor
+-Venta
+-Categoria
+
+Provedor 1  - m producto
+colaborador 1  -  m venta
+producto  1  - m  venta
+categoria 1  - 1 producto
+rol 1  - 1  colaborador
+venta-colaborador
+
+
+
+
+
