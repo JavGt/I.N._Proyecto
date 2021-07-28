@@ -49,7 +49,7 @@
 
 html {
   font-family: sans-serif;
-  line-height: 1.15;
+  line-height: 1.15;  
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
@@ -720,7 +720,7 @@ pre code {
   -webkit-flex: 0 0 50%;
   -ms-flex: 0 0 50%;
   flex: 0 0 50%;
-  max-width: 50%;
+  max-width: 40%;
 }
 
 .col-7 {
@@ -8720,6 +8720,7 @@ button.bg-dark:focus {
 
 .m-0 {
   margin: 0 !important;
+  
 }
 
 .mt-0,
