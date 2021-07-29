@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 28-07-2021 a las 04:16:03
+-- Tiempo de generación: 29-07-2021 a las 22:08:03
 -- Versión del servidor: 5.7.33
 -- Versión de PHP: 7.4.19
 
@@ -91,8 +91,7 @@ INSERT INTO `colaborador` (`Nombre`, `AP`, `AM`, `Direccion`, `Correo`, `Telefon
 ('VICTORIA  EUGENIA ', 'CUEVAS ', 'JIMENEZ', 'AV. 20 DE NOVIEMBRE NO.1024	', NULL, 246242453, 1, 4),
 ('CAMILO ', 'MORA ', 'MUÑOZ', 'AV. 20 DE NOVIEMBRE NO.1024	', NULL, 246636353, 1, 5),
 ('ISIDRO ', 'BRAVO ', 'UBIETA', 'CALLE ZARAGOZA NO. 1010	', NULL, 246234153, 1, 6),
-('IBIS IVONNE', 'JUAREZ ', 'GAVITO', 'CALLE MATAMOROS NO. 310	', NULL, 246234753, 1, 7),
-('HECTOR IGNACIO ', 'GOMEZ ', 'FUENTES', 'AV. 20 DE NOVIEMBRE NO.859-B	', NULL, 246352343, 1, 8);
+('IBIS IVONNE', 'JUAREZ ', 'GAVITO', 'CALLE MATAMOROS NO. 310	', NULL, 246234753, 1, 7);
 
 -- --------------------------------------------------------
 
@@ -115,7 +114,8 @@ INSERT INTO `detalles_venta` (`ID_Productos`, `ID_Venta`, `Cantidad`, `Total`) V
 (1, 1, 1, 899),
 (2, 1, 1, 1649),
 (1, 2, 1, 899),
-(2, 2, 1, 1649);
+(2, 2, 1, 1649),
+(1, 3, 10, 899);
 
 -- --------------------------------------------------------
 
@@ -164,7 +164,8 @@ CREATE TABLE `productos` (
 
 INSERT INTO `productos` (`ID_Productos`, `Nombre`, `Cantidad`, `Precio`, `Talla`, `Descuento`, `Descripcion`, `ID_Categoria`, `ID_Proveedor`, `ID_Edad`, `Color`) VALUES
 (1, 'Nike Revolution 5', 5, '899.00', '9.00', NULL, '¡Es un llamado a todos los artistas jóvenes! El Nike Blazer Mid\' 77 BB invita a los niños a pintar, dibujar y diseñar este clásico del básquetbol como quieren. Los ponemos en marcha con salpicaduras de pintura y un logotipo garabateado. Vintage, cómodos y duraderos, están diseñados para arrasar.', 1, 1, 1, ' Puesta de sol pulso/Blanco/Negro'),
-(2, 'Nike Blazer Mid \'77 BB', 5, '1649.00', '8.00', 10, 'Corre, juega y diviértete con el Nike Revolution 5. Envuelve los pies de los más pequeños con cuero duradero para brindar soporte y su suave amortiguación de espuma ofrece comodidad revolucionaria. La correa permite poner y quitar fácilmente el calzado.', 1, 1, 1, 'Blanco/Blanco/Vela/Negro');
+(2, 'Nike Blazer Mid \'77 BB', 5, '1649.00', '8.00', 10, 'Corre, juega y diviértete con el Nike Revolution 5. Envuelve los pies de los más pequeños con cuero duradero para brindar soporte y su suave amortiguación de espuma ofrece comodidad revolucionaria. La correa permite poner y quitar fácilmente el calzado.', 1, 1, 1, 'Blanco/Blanco/Vela/Negro'),
+(3, 'Jordan MA2', 10, '2899.00', '24.00', 20, 'Rompe el status quo del calzado con el Jordan MA2. Confeccionado con una combinación de gamuza, cuero de plena flor y una variedad de textiles, este calzado cuenta con etiquetas no convencionales, micrográficos técnicos y bordes de espuma rústica para lograr un equilibrio entre lo nuevo y lo clásico. Fácil de poner y quitar, se usa con casi todo.', 1, 1, 3, 'Negro/Rojo');
 
 -- --------------------------------------------------------
 
@@ -243,9 +244,15 @@ CREATE TABLE `venta` (
 --
 
 INSERT INTO `venta` (`Fecha`, `Total`, `ID_Venta`, `ID_Colaborador`) VALUES
-('2021-07-01', '2528.00', 1, 1),
-('2020-07-08', '2528.00', 2, 2),
-('2020-07-01', '2528.00', 3, 2);
+('2021-07-01', '2528.00', 1, 3),
+('2020-07-08', '2528.00', 2, 3),
+('2020-07-01', '2528.00', 3, 1),
+('2020-07-08', '899.00', 4, 3),
+('2021-07-29', '1000.00', 5, 4),
+('2021-07-28', '10.00', 6, 6),
+('2021-07-22', '2528.00', 7, 5),
+('2021-07-21', '5.00', 8, 5),
+('2021-07-26', '2324.00', 9, 6);
 
 --
 -- Índices para tablas volcadas
@@ -331,7 +338,7 @@ ALTER TABLE `edad`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `ID_Productos` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID_Productos` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedor`
@@ -349,7 +356,7 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT de la tabla `venta`
 --
 ALTER TABLE `venta`
-  MODIFY `ID_Venta` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID_Venta` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas

@@ -16,7 +16,7 @@ $(function () {
   var salesChartCanvas = $('#salesChart').get(0).getContext('2d')
 
   var salesChartData = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ['Enero','Febreo','Marzo','Abril','Mayo','Junio','Julio','Agosto'],
     datasets: [
       {
         label: 'Digital Goods',
