@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
--- Servidor: localhost:3306
--- Tiempo de generación: 29-07-2021 a las 22:08:03
--- Versión del servidor: 5.7.33
--- Versión de PHP: 7.4.19
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 01-08-2021 a las 05:20:23
+-- Versión del servidor: 10.4.14-MariaDB
+-- Versión de PHP: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `categoria` (
   `ID_Categoria` int(10) NOT NULL,
   `Categoria` varchar(50) NOT NULL,
-  `Descipcion` text
+  `Descipcion` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -149,9 +149,9 @@ CREATE TABLE `productos` (
   `Nombre` varchar(50) NOT NULL,
   `Cantidad` int(5) NOT NULL,
   `Precio` decimal(11,2) NOT NULL,
-  `Talla` decimal(4,2) NOT NULL,
+  `Talla` decimal(10,2) NOT NULL,
   `Descuento` int(3) DEFAULT NULL,
-  `Descripcion` text,
+  `Descripcion` text DEFAULT NULL,
   `ID_Categoria` int(10) NOT NULL,
   `ID_Proveedor` int(10) NOT NULL,
   `ID_Edad` int(10) NOT NULL,
@@ -165,7 +165,36 @@ CREATE TABLE `productos` (
 INSERT INTO `productos` (`ID_Productos`, `Nombre`, `Cantidad`, `Precio`, `Talla`, `Descuento`, `Descripcion`, `ID_Categoria`, `ID_Proveedor`, `ID_Edad`, `Color`) VALUES
 (1, 'Nike Revolution 5', 5, '899.00', '9.00', NULL, '¡Es un llamado a todos los artistas jóvenes! El Nike Blazer Mid\' 77 BB invita a los niños a pintar, dibujar y diseñar este clásico del básquetbol como quieren. Los ponemos en marcha con salpicaduras de pintura y un logotipo garabateado. Vintage, cómodos y duraderos, están diseñados para arrasar.', 1, 1, 1, ' Puesta de sol pulso/Blanco/Negro'),
 (2, 'Nike Blazer Mid \'77 BB', 5, '1649.00', '8.00', 10, 'Corre, juega y diviértete con el Nike Revolution 5. Envuelve los pies de los más pequeños con cuero duradero para brindar soporte y su suave amortiguación de espuma ofrece comodidad revolucionaria. La correa permite poner y quitar fácilmente el calzado.', 1, 1, 1, 'Blanco/Blanco/Vela/Negro'),
-(3, 'Jordan MA2', 10, '2899.00', '24.00', 20, 'Rompe el status quo del calzado con el Jordan MA2. Confeccionado con una combinación de gamuza, cuero de plena flor y una variedad de textiles, este calzado cuenta con etiquetas no convencionales, micrográficos técnicos y bordes de espuma rústica para lograr un equilibrio entre lo nuevo y lo clásico. Fácil de poner y quitar, se usa con casi todo.', 1, 1, 3, 'Negro/Rojo');
+(3, 'Jordan MA2', 10, '2899.00', '24.00', 20, 'Rompe el status quo del calzado con el Jordan MA2. Confeccionado con una combinación de gamuza, cuero de plena flor y una variedad de textiles, este calzado cuenta con etiquetas no convencionales, micrográficos técnicos y bordes de espuma rústica para lograr un equilibrio entre lo nuevo y lo clásico. Fácil de poner y quitar, se usa con casi todo.', 1, 1, 3, 'Negro/Rojo'),
+(4, 'Brantano', 1, '679.00', '22.00', NULL, 'Botas Marca Brantano de piel color negro ', 7, 24, 4, 'Negro'),
+(5, 'Brantano', 1, '679.00', '23.00', NULL, 'Botas Marca Brantano de piel color negro ', 7, 24, 4, 'Negro'),
+(6, 'Call It Spring', 3, '999.00', '23.00', NULL, 'Bota Call It Spring Sterna Casual', 7, 3, 4, 'Miel'),
+(7, 'Call It Spring', 2, '999.00', '23.50', NULL, 'Bota Call It Spring Sterna Casual', 7, 10, 4, 'Miel'),
+(8, 'Call It Spring', 2, '1500.00', '24.50', NULL, 'Bota Call It Spring Sterna Casual', 7, 10, 2, 'Negro'),
+(9, 'RB', 1, '999.00', '23.00', NULL, 'Bota RBCOLLECTION exterior piel sintetica ', 7, 3, 4, 'Café'),
+(10, 'Carlo Rossetti', 5, '1689.00', '24.00', NULL, 'Bota Carlo Rossetti Baku gamuza', 7, 25, 3, 'Negro'),
+(11, 'Carlo Rossetti', 3, '1689.00', '26.50', NULL, 'Bota Carlo Rossetti Baku gamuza', 7, 25, 3, 'Miel'),
+(12, 'Ozono', 5, '948.00', '12.00', 20, 'Bota alta capa de Ozono', 9, 26, 1, 'Café'),
+(13, 'Ozono', 5, '948.00', '23.00', 10, 'Bota alta capa de Ozono', 9, 26, 1, 'Negro'),
+(14, 'Ozono', 4, '1200.00', '26.00', 10, 'Bota alta capa de Ozono', 9, 26, 3, 'Negro'),
+(15, 'Wonders', 3, '789.00', '24.00', NULL, 'Botas Largas Oregón Mujer ', 7, 8, 2, 'Miel'),
+(16, 'Wonders', 4, '789.00', '25.00', NULL, 'Botas Largas Oregón Mujer', 7, 8, 2, 'Café'),
+(17, 'Wonders', 4, '789.00', '23.00', NULL, 'Botas Largas Oregón Mujer', 7, 8, 2, 'Negro'),
+(18, 'Beige', 5, '749.50', '22.00', NULL, 'Bota de tacon, con Autoajuste estilo negro', 7, 11, 2, 'Beige'),
+(19, 'Beige', 2, '749.50', '23.00', NULL, 'Bota de tacon, con Autoajuste estilo negro', 7, 11, 2, 'Miel'),
+(20, 'Beige', 5, '749.50', '26.00', NULL, 'Bota de tacon, con Autoajuste estilo negro', 7, 11, 2, 'Negro'),
+(21, 'Sku', 5, '999.00', '22.00', NULL, 'Bota Dama Negro', 7, 24, 4, 'Negro'),
+(22, 'Sku', 5, '999.00', '23.00', NULL, 'Bota Dama color Miel', 7, 24, 4, 'Miel'),
+(23, 'Sku', 3, '999.00', '25.00', NULL, 'Bota Dama Café', 7, 24, 2, 'Café'),
+(24, 'Maxi', 6, '899.00', '11.00', NULL, 'Bota estilo casual color café', 9, 25, 1, 'Café'),
+(25, 'Maxi', 3, '899.00', '16.00', NULL, 'Bota estilo casual color miel', 7, 25, 1, 'Miel'),
+(26, 'Maxi', 6, '899.00', '22.00', NULL, 'Bota estilo casual color negro', 7, 25, 4, 'Negro'),
+(27, 'Brant', 7, '679.00', '22.00', NULL, 'Botas de piel color negro para mujer', 7, 23, 2, 'Negro'),
+(28, 'Brant', 5, '679.00', '23.00', NULL, 'Botas de piel color café para mujer ', 7, 23, 2, 'Café'),
+(29, 'Shasa', 4, '199.00', '23.00', NULL, 'Sandalia doble nudo color blanco', 11, 23, 4, 'Blanco'),
+(30, 'Shasa', 5, '199.00', '24.00', NULL, 'Sandalia doble nudo color verde militar', 11, 23, 2, 'Verde Militar'),
+(31, 'Shasa', 5, '199.00', '26.00', NULL, 'Sandalia doble nudo color nada', 11, 23, 2, 'Nada'),
+(32, 'Nude', 5, '299.00', '11.00', NULL, 'Tacon Bloque mini tiras largas', 14, 9, 1, 'Rosa');
 
 -- --------------------------------------------------------
 
@@ -204,7 +233,11 @@ INSERT INTO `proveedor` (`ID_Proveedor`, `Nombre`) VALUES
 (19, 'New Balance'),
 (20, 'Fila'),
 (21, 'Brooks'),
-(22, 'Eileen Garcia México');
+(22, 'Eileen Garcia México'),
+(23, 'Sahara'),
+(24, 'Brantano'),
+(25, 'Carlo Rossetti'),
+(26, 'Ozono');
 
 -- --------------------------------------------------------
 
@@ -215,7 +248,7 @@ INSERT INTO `proveedor` (`ID_Proveedor`, `Nombre`) VALUES
 CREATE TABLE `rol` (
   `ID_Rol` int(10) NOT NULL,
   `Nombre` varchar(50) NOT NULL,
-  `Descipcion` text
+  `Descipcion` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -252,7 +285,8 @@ INSERT INTO `venta` (`Fecha`, `Total`, `ID_Venta`, `ID_Colaborador`) VALUES
 ('2021-07-28', '10.00', 6, 6),
 ('2021-07-22', '2528.00', 7, 5),
 ('2021-07-21', '5.00', 8, 5),
-('2021-07-26', '2324.00', 9, 6);
+('2021-07-26', '2324.00', 9, 6),
+('2021-07-29', '1500.00', 10, 1);
 
 --
 -- Índices para tablas volcadas
@@ -338,13 +372,13 @@ ALTER TABLE `edad`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `ID_Productos` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID_Productos` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedor`
 --
 ALTER TABLE `proveedor`
-  MODIFY `ID_Proveedor` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `ID_Proveedor` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de la tabla `rol`
@@ -356,7 +390,7 @@ ALTER TABLE `rol`
 -- AUTO_INCREMENT de la tabla `venta`
 --
 ALTER TABLE `venta`
-  MODIFY `ID_Venta` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `ID_Venta` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Restricciones para tablas volcadas
