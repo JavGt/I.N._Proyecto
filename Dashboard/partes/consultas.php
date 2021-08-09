@@ -116,8 +116,19 @@
      $consulta21 = "SELECT * FROM categoria";
      $resultado21 = mysqli_query($conexion,$consulta21);
 
+     $consulta21_1 = "SELECT ID_Categoria,categoria FROM categoria";
+     $resultado21_1 = mysqli_query($conexion,$consulta21_1);
+
+     $consulta22_1 = "SELECT ID_Proveedor FROM proveedor";
+     $resultado22_1 = mysqli_query($conexion,$consulta22_1);
+
      $consulta22 = "SELECT * FROM proveedor";
      $resultado22 = mysqli_query($conexion,$consulta22);
+
+ 
+
+     $consulta22_1 = "SELECT Nombre FROM edad";
+     $resultado22_1 = mysqli_query($conexion,$consulta22_1);
 
      $consulta23 = "SELECT * FROM colaborador INNER JOIN rol WHERE colaborador.ID_Rol = rol.ID_Rol";
      $resultado23 = mysqli_query($conexion,$consulta23);
