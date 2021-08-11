@@ -8,10 +8,10 @@
 		        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
 		      </li>
 		      <li class="nav-item d-none d-sm-inline-block">
-		        <a href="index.html" class="nav-link">Home</a>
+		        <a href="index.php" class="nav-link">Home</a>
 		      </li>
 		        <li class="nav-item d-none d-sm-inline-block">
-		        <a href="#" class="nav-link">Venta del calzado</a>
+		        <a class="nav-link">VENTA DE CALZADO</a>
 		      </li>
 		    </ul>
 
