@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-08-2021 a las 00:26:59
+-- Tiempo de generación: 11-08-2021 a las 22:12:34
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.4.11
 
@@ -61,7 +61,8 @@ INSERT INTO `categoria` (`ID_Categoria`, `Categoria`, `Descipcion`) VALUES
 (21, 'Minimalistas / Barefoot', NULL),
 (22, 'Swimrun', NULL),
 (23, 'Escalada o Pies de Gato', NULL),
-(24, 'Cross Training', NULL);
+(24, 'Cross Training', NULL),
+(25, 'Pantuflas', NULL);
 
 -- --------------------------------------------------------
 
@@ -290,7 +291,82 @@ INSERT INTO `productos` (`ID_Productos`, `Nombre`, `Cantidad`, `Precio`, `Talla`
 (124, 'Ozono', 5, '948.00', '25.00', 20, 'Bota alta capa de Ozono', 9, 26, 3, 'Café'),
 (125, 'Ozono', 5, '948.00', '26.00', 10, 'Bota alta capa de Ozono', 9, 26, 3, 'Negro'),
 (126, 'Ozono', 4, '1200.00', '26.50', 10, 'Bota alta capa de Ozono', 9, 26, 3, 'Negro'),
-(127, 'Wonders', 3, '789.00', '24.50', NULL, 'Botas Largas Oregón Mujer ', 7, 8, 2, 'Miel');
+(127, 'Wonders', 3, '789.00', '24.50', NULL, 'Botas Largas Oregón Mujer ', 7, 8, 2, 'Miel'),
+(128, 'Capricho OR', 3, '1200.00', '23.50', 30, 'Zapato de piso de piel.', 2, 9, 2, 'Azul'),
+(129, 'Lucrecia Cordero', 2, '2000.00', '23.50', 0, 'Zapatilla con tacón numero10, con tirantes de piedra sircornia.', 3, 23, 2, 'Negro con Plata.'),
+(130, 'Pietro Alessandro', 1, '2500.00', '24.50', 20, 'Zapatilla con taco de 11cm de piel.', 3, 23, 2, 'Dorado'),
+(131, 'Dariana Fency', 3, '1200.00', '24.50', 10, 'Zapatilla de piel con sujetador al tobillo.', 3, 7, 2, 'Negor'),
+(132, 'D´Crístian', 5, '999.00', '26.50', 10, 'Zapatilla con plataforma tacón de 10cm con flores.', 3, 26, 2, 'Café'),
+(133, 'Deportivo Serraje', 3, '1300.00', '25.50', 0, 'DEPORTIVO DE SERRAJE CON PLATAFORMA. DETALLE DE PESPUNTES, TIRADOR TRASERO Y CIERRE MEDIANTE CORDONES.\r\nDEPORTIVO DE SERRAJE CON PLATAFORMA. DETALLE DE PESPUNTES, TIRADOR TRASERO Y CIERRE MEDIANTE CORDONES.\r\n', 1, 13, 4, 'Marrón Arena'),
+(134, 'Deportivo Combinado', 2, '1500.00', '25.50', 5, 'DEPORTIVO EN COMBINACIÓN DE MATERIALES. SUELA EN CONTRASTE DE COLOR. TIRADOR TRASERO. CIERRE MEDIANTE CORDONES.\r\nPLANTILLA TÉCNICA FLEXIBLE DE ESPUMA COMPUESTA DE POLIURETANO, DISEÑADA PARA OFRECER UN MAYOR CONFORT.', 1, 13, 4, 'Beige'),
+(135, 'Deportivo Combinado', 3, '1500.00', '23.50', 5, 'DEPORTIVO EN COMBINACIÓN DE MATERIALES. SUELA EN CONTRASTE DE COLOR. TIRADOR TRASERO. CIERRE MEDIANTE CORDONES.\r\nPLANTILLA TÉCNICA FLEXIBLE DE ESPUMA COMPUESTA DE POLIURETANO, DISEÑADA PARA OFRECER UN MAYOR CONFORT.', 1, 13, 4, 'Negro'),
+(136, 'Deportivo Plataforma Piel', 3, '1499.00', '25.50', 5, 'DEPORTIVO ABOTINADO DE PIEL CON PLATAFORMA. TIRADOR TRASERO Y CIERRE MEDIANTE CORDONES.\r\nPLANTILLA TÉCNICA FLEXIBLE DE ESPUMA COMPUESTA DE POLIURETANO, DISEÑADA PARA OFRECER UN MAYOR CONFORT.', 1, 20, 2, 'Blanco'),
+(137, 'Deportivas Canvas', 2, '600.00', '23.50', NULL, 'DETALLE DE PESPUNTES. TIRADOR TRASERO. CIERRE MEDIANTE CORDONES.\r\nPLANTILLA TÉCNICA FLEXIBLE DE ESPUMA COMPUESTA DE POLIURETANO, DISEÑADA PARA OFRECER UN MAYOR CONFORT.', 1, 4, 4, 'Crudo'),
+(138, 'Deportivo Contraste', 2, '800.00', '22.50', 5, 'DEPORTIVO EN COMBINACIÓN DE MATERIALES Y DETALLES EN CONTRASTE DE COLOR. CIERRE MEDIANTE CORDONES.', 1, 12, 4, 'Blanco'),
+(139, 'Zapato Tacón Destalonado Brillos', 4, '1499.00', '23.50', NULL, 'ZAPATO DE TACÓN DESTALONADO CON DETALLE DE BRILLOS. ESCOTE Y TALÓN CUADRADOS. ACABADO EN PUNTA ALARGADA.', 2, 3, 4, 'Negro'),
+(140, 'Zapato Tacón Destalonado Brillos', 4, '1499.00', '24.50', NULL, 'ZAPATO DE TACÓN DESTALONADO CON DETALLE DE BRILLOS. ESCOTE Y TALÓN CUADRADOS. ACABADO EN PUNTA ALARGADA.', 2, 3, 4, 'Negro'),
+(141, 'Zapato Tacón Destalonado Brillos', 4, '1499.00', '23.50', NULL, 'ZAPATO DE TACÓN DESTALONADO CON DETALLE DE BRILLOS. ESCOTE Y TALÓN CUADRADOS. ACABADO EN PUNTA ALARGADA.', 2, 3, 4, 'Oro'),
+(142, 'Zapato Tacón Tejido', 2, '999.00', '22.50', NULL, 'ZAPATO TACÓN TEJIDO\r\nZAPATO DE TACÓN TIPO SALÓN DE TEJIDO. ACABADO EN PUNTA.', 2, 4, 4, 'Rosa Fluorescente'),
+(148, 'Kansas Refill', 6, '3500.00', '26.50', 5, 'Zapato de vestir con cordones, con perforaciones en lateral.', 2, 21, 4, 'Negro'),
+(149, 'Harry Refill', 8, '2500.00', '24.50', 0, 'Zapato de vestir para caballero con cordones al tono.', 2, 26, 4, 'Negro'),
+(150, 'Boston Refill', 2, '990.00', '26.00', NULL, 'Zapato de vestir con cordones.', 2, 21, 4, 'Negro'),
+(151, 'Cavana Red', 2, '1348.00', '26.00', 15, 'Zapato carpet de piel.', 2, 21, 4, 'Negro'),
+(152, 'Leon', 3, '980.00', '27.00', 0, 'Zapato casual de gamuza cafe ferrero ', 2, 25, 4, 'Café'),
+(153, 'Leon', 3, '980.00', '26.50', 10, 'Zapato casual de gamuza negro.', 2, 25, 4, 'Negro'),
+(154, 'Leon', 3, '980.00', '10.00', NULL, 'Zapato casual de gamuza color gris.', 2, 25, 4, 'Gris'),
+(155, 'Derby', 2, '2879.00', '26.00', 20, 'Zapato dervy pikolinos piel', 2, 21, 4, 'Negro'),
+(156, 'Derby Dockers', 4, '1079.00', '26.00', 20, 'Zapato derby Docker de piel.', 2, 25, 4, 'Café'),
+(157, 'Alpargata', 4, '719.00', '25.50', 20, 'Zapato perry ellis.', 2, 21, 4, 'Negro'),
+(158, 'Oxford', 5, '1079.00', '25.00', 20, 'Zapato oxford jbe de piel', 2, 22, 4, 'Negro'),
+(159, 'Cavana Red', 2, '1348.00', '26.00', 15, 'Zapato carpet de piel.', 2, 21, 4, 'Negro'),
+(160, 'Leon', 3, '980.00', '27.00', 0, 'Zapato casual de gamuza cafe ferrero ', 2, 25, 4, 'Café'),
+(161, 'Leon', 3, '980.00', '26.50', 10, 'Zapato casual de gamuza negro.', 2, 25, 4, 'Negro'),
+(162, 'Leon', 3, '980.00', '10.00', NULL, 'Zapato casual de gamuza color gris.', 2, 25, 4, 'Gris'),
+(163, 'Derby', 2, '2879.00', '26.00', 20, 'Zapato dervy pikolinos piel', 2, 21, 4, 'Negro'),
+(164, 'Derby Dockers', 4, '1079.00', '26.00', 20, 'Zapato derby Docker de piel.', 2, 25, 4, 'Café'),
+(165, 'Alpargata', 4, '719.00', '25.50', 20, 'Zapato perry ellis.', 2, 21, 4, 'Negro'),
+(166, 'Oxford', 5, '1079.00', '25.00', 20, 'Zapato oxford jbe de piel', 2, 22, 4, 'Negro'),
+(167, 'Guess', 2, '1899.00', '27.50', NULL, 'Tenis Guees para hombre GMBERNINI-N', 2, 25, 3, 'Negro/Verde Olivo/Blanco '),
+(168, 'New', 4, '1799.00', '28.50', 5, 'Tenis New Blance para hombre', 1, 9, 4, 'Amarillo'),
+(169, 'Caterpillar ', 3, '3599.00', '30.00', 10, 'Tenis caterpillar oara hombre caterpillar p71.\r\n', 1, 23, 3, 'Negro'),
+(170, 'Adidas Originals', 5, '1999.00', '28.00', NULL, 'Tenis Adidas Originals para Hombre U_Path Run.\r\n', 1, 2, 3, 'Negro'),
+(171, 'L222Mg', 1, '999.00', '25.50', 20, 'Tenis Levi\'S para Hombre L228101Mg.\r\n', 1, 8, 3, 'Verde'),
+(172, 'DC', 3, '639.00', '25.00', NULL, 'Tenis DC Shoes para hombre Flash TX.\r\n', 4, 9, 3, 'Rojo'),
+(173, 'Onitsuka', 4, '2299.00', '29.00', NULL, 'Tenis Onitsuka para Hombre Mexico 66.\r\n', 4, 9, 4, 'Blanco'),
+(174, 'Champion', 2, '2239.00', '29.00', 20, 'Tenis Champion para hombre Cp101168m.\r\n', 1, 19, 4, 'Negro'),
+(175, 'Converse Chuck', 8, '1099.00', '30.00', NULL, 'Tenis Converse Chuck Taylor All Star para hombre.\r\n', 4, 9, 3, 'Negro/Azul/Blanco '),
+(176, 'Coq Soportif', 2, '1199.00', '25.50', 20, 'Tenis Le Coq Sportif para hombre 2020339 con logotipo.\r\n', 1, 14, 4, 'Azul Rey '),
+(177, 'Lisa', 5, '4526.00', '14.00', 20, 'Zapato  en Botita lisa Andanenes piel para niña.\r\n', 2, 6, 1, 'Fucsia'),
+(178, 'Lisa', 6, '2506.00', '12.00', 20, 'Zapato en Botita lisa Andanenes piel para niña.', 2, 10, 1, 'Beige'),
+(179, 'Maty Jane', 4, '3433.00', '17.00', NULL, 'Mary Jane lisa Mon Caramel para niña', 2, 26, 1, 'Blanco'),
+(180, 'Balerina', 1, '4596.00', '21.00', 5, 'Balerina lisa Piquenique para niña.\r\n', 2, 10, 1, 'Crema'),
+(181, 'Bublle', 4, '2795.00', '15.00', 20, '\r\nTenis Bubble Gummers Luck para niña.\r\n', 1, 13, 1, 'Azul Marino'),
+(182, 'Nike Casuss', 1, '2361.00', '15.00', 5, 'Tenis Nike casual.\r\n\r\n', 1, 1, 1, 'Blanco'),
+(183, 'Air Max', 2, '1319.00', '12.00', 20, 'Tenis Nike casual\r\n', 1, 1, 1, 'Blanco'),
+(184, 'Ontare', 4, '1099.00', '11.00', NULL, 'Tenis K-Swiss Ontare de niña\r\n', 1, 9, 1, 'Rosa '),
+(185, 'Lotto', 2, '5961.00', '12.00', 30, 'Tenis Lotto de niña BANGER.\r\n', 1, 9, 1, 'Rosa'),
+(186, 'SPERRY', 2, '1499.00', '10.50', NULL, 'Mocasines con cintillos Niño', 2, 21, 1, 'Café'),
+(187, 'Choclo', 4, '5925.00', '11.00', 30, 'Zapato choclo para niño coloso 6001.\r\n', 2, 3, 1, 'Café'),
+(188, 'Plamgo', 6, '2581.00', '20.00', NULL, 'Zapato vestir niño azul plumbago piel café.\r\n', 2, 25, 1, 'Café '),
+(189, 'Plamgo', 5, '1235.00', '18.00', 5, 'Zapato para niño audaz 159302q.\r\n', 2, 9, 1, 'Café Claro'),
+(190, 'Flufy', 2, '1258.00', '22.00', 10, 'Choclo Flufy Café para Niño Chabelo.\r\n', 2, 21, 1, 'Café'),
+(191, 'Andanenes', 3, '2588.00', '14.00', NULL, 'Botita para niño de Piel Natural Azul.\r\n\r\n', 2, 10, 1, 'Azul Cobalto'),
+(192, 'Sperry', 1, '5896.00', '23.50', 5, 'Botita de Piel Natural Marino.\r\n\r\n', 2, 8, 1, 'Azul Cobalto'),
+(193, 'Elefante', 2, '4523.00', '20.00', 20, 'Sandalia lisa Elefante piel para niño.\r\n\r\n', 14, 9, 1, 'Beige'),
+(194, 'Plamgo', 5, '2381.00', '13.00', 5, '\r\nBotita de niño con Estampado de avión en Piel Natural.\r\n', 7, 9, 1, 'Azul Lavanda '),
+(195, 'Sperry', 1, '5631.00', '14.00', 20, 'Andatech zapato Deportivo .\r\n\r\n', 2, 14, 1, 'Azul'),
+(196, 'Stride', 3, '1531.00', '14.00', NULL, 'Sandalia lisa Stride Rite para niño.\r\n\r\n', 14, 9, 1, 'Café'),
+(197, 'Lgor', 1, '3125.00', '16.00', 20, 'Sandalia lisa Igor para niño.\r\n\r\n', 14, 10, 1, 'Azul Marino '),
+(198, 'Camper', 1, '1080.00', '18.50', 20, 'Sandalia lisa Camper para niño.\r\n\r\n', 14, 18, 1, 'Verde'),
+(199, 'Elefante', 3, '2369.00', '19.00', 0, 'Sandalia lisa Elefante piel para niño.\r\n', 14, 10, 1, 'Azul'),
+(200, 'Mon', 2, '3189.00', '15.00', NULL, 'Sandalia Mon Caramel para niño.\r\n', 14, 16, 1, 'Café'),
+(201, 'Dilan', 1, '2593.00', '18.00', 20, 'Tenis Disney Dilan para niño.\r\n\r\n', 14, 10, 1, 'Azul'),
+(202, 'Mon', 3, '596.00', '14.50', NULL, 'Pantufla lisa Mon Caramel para niña.\r\n\r\n\r\n', 25, 23, 1, 'Amarillo'),
+(203, 'PJ', 1, '3125.00', '11.50', 20, 'Pantufla PJ Masks para niño.\r\n\r\n\r\n', 25, 10, 1, 'Verde'),
+(204, 'Nici', 2, '1080.00', '14.50', 20, 'Pantuflas Nici Tigre Dientes de sable.\r\n\r\n\r\n', 25, 15, 1, 'Gris'),
+(205, 'Elefante', 5, '1550.00', '15.50', 5, 'Pantuflas Pingüino Frizzy Nice.\r\n\r\n', 25, 10, 1, 'Negro con Amarillo'),
+(206, 'Hot Potatoes', 8, '3189.00', '15.50', NULL, 'Pantugfla HTDALARNA para niño.\r\n\r\n', 25, 16, 1, 'Multicolor '),
+(207, 'DilanTb', 2, '2593.00', '12.50', 20, 'Pantuflas para niño\r\n\r\n', 25, 10, 1, 'Verde Soldado');
 
 -- --------------------------------------------------------
 
@@ -493,7 +569,7 @@ ALTER TABLE `venta`
 -- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `ID_Categoria` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `ID_Categoria` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT de la tabla `colaborador`
@@ -511,7 +587,7 @@ ALTER TABLE `edad`
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `ID_Productos` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+  MODIFY `ID_Productos` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
 
 --
 -- AUTO_INCREMENT de la tabla `proveedor`
