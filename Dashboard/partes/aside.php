@@ -75,7 +75,7 @@
 		            <a href="data_colaboradores.php" class="nav-link">
 		              <i class="nav-icon fas fa-th"></i>
 		              <p>
-		                Esclavos
+		                Colaboradores
 		              </p>
 		            </a>
 		          </li>		         
