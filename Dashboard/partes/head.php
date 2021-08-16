@@ -2,7 +2,7 @@
 	function head(){
 		?>
 		  <meta charset="utf-8">
-		  <meta http-equiv="refresh" content="2">
+		  <!-- <meta http-equiv="refresh" content="2"> -->
 		  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 		  <!-- Google Font: Source Sans Pro -->

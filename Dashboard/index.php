@@ -255,12 +255,16 @@
                 
                 <div class="d-flex">
                   <p class="d-flex flex-column">
-                    <span class="text-bold text-lg">$820</span>
+                    <span class="text-bold text-lg">$
+                      <?php echo($row_D['0'])?>
+                      </span>
                     <span>Esta semana</span>
                   </p>
                   <p class="ml-auto d-flex flex-column text-right"></p>
                   <p class="d-flex flex-column">
-                    <span class="text-bold text-lg">$820</span>
+                    <span class="text-bold text-lg">$
+                      <?php echo($row_D_Anterior['0'])?>
+                    </span>
                     <span>Semana pasada</span>
                   </p>
 
@@ -348,8 +352,16 @@
           <div class="col-lg-7">
 
             <div class="card">
-              <div class="card-header border-0">
+              <div class="card-header">
                 <h3 class="card-title">Producto en oferta</h3>
+                <div class="card-tools">
+                   <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-card-widget="remove">
+                      <i class="fas fa-times"></i>
+                    </button>
+                </div>
                 
               </div>
               <div class="card-body table-responsive p-0">
@@ -370,7 +382,7 @@
                   ?>
                   <tr>
                     <td>
-                      <img src="dist/img/prod-1.jpg" alt="Product 1" class="img-circle img-size-32 mr-2">
+                      <img src="dist/img/shoes.png" alt="Product 1" class="img-circle img-size-32 mr-2">
                       <?php echo $row['Nombre']; ?>
                     </td>
                     <td>$<?php echo $row['Precio']; ?></td>
@@ -392,7 +404,7 @@
               </div>
             </div>
             <!-- /.card -->
-          </div><!-- /.col-md-6 -->
+          </div><!-- /.col-md-7 -->
 
           <div class="col-md-5">
               <!-- USERS LIST -->
@@ -424,7 +436,7 @@
                     ?>
 
                     <li>
-                      <img src="dist/img/avatar4.png" alt="User Image">
+                      <img src="dist/img/user.1.png" alt="User Image">
                       <a class="users-list-name" href="#"><?php echo $row1['Nombre']?></a>
                       <span class="users-list-date"><?php echo $row1['Telefono']?></span>
                     </li>

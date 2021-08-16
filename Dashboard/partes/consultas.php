@@ -1,5 +1,12 @@
 <?php 
 
+     // Variables
+     $Year = date("Y");
+     $month = date("m");
+     $day = date("d")-6;
+     $day_anterior = date("d")-13;
+
+
 	// -----------Consultas-----------
      function consulta($valor1,$valor2,$conexion){
           $consulta = "SELECT {$valor1} FROM {$valor2}";
@@ -132,6 +139,22 @@
 
      $consulta23 = "SELECT * FROM colaborador INNER JOIN rol WHERE colaborador.ID_Rol = rol.ID_Rol";
      $resultado23 = mysqli_query($conexion,$consulta23);
+
+
+
+     $consulta_D = "SELECT sum(Total) FROM venta  WHERE venta.fecha BETWEEN '{$Year}-{$month}-{$day}' and DATE(now() )";
+
+     $resultado_D = mysqli_query($conexion,$consulta_D);
+     $row_D = $resultado_D->fetch_array();
+
+
+     $consulta_D_Anterior = "SELECT sum(Total) FROM venta  WHERE venta.fecha BETWEEN '{$Year}-{$month}-{$day_anterior}' and '{$Year}-{$month}-{$day}'";
+
+     $resultado_D_Anterior = mysqli_query($conexion,$consulta_D_Anterior);
+     $row_D_Anterior = $resultado_D_Anterior->fetch_array();
+     
+     
+     
 
 
 
