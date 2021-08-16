@@ -11,7 +11,7 @@
 		        <a href="index.php" class="nav-link">Home</a>
 		      </li>
 		        <li class="nav-item d-none d-sm-inline-block">
-		        <a href="#" class="nav-link">Venta del calzado</a>
+		        <a class="nav-link">VENTA DE CALZADO</a>
 		      </li>
 		    </ul>
 
