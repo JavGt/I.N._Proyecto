@@ -51,59 +51,7 @@
         <!-- Small boxes (Stat box) -->
         <div class="row">
 
-          <div class="col-lg-3 col-6"><!--1-->
-            <!-- small box -->
-            <div class="small-box bg-info">
-              <div class="inner">
-                <h3>
-                  Ventas :
-                  <?php 
-                    consulta($valor1 = 'COUNT(ID_venta)',$valor2 ='venta',$conexion);
-                  ?>                
-                </h3>
-
-                <p>Ventas Totales</p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-shopping-basket"></i>
-              </div>
-              <a href="data_ventas.php" class="small-box-footer">Ir a las ventas <i class="fas fa-arrow-circle-right"></i></a>
-            </div>
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>Ventas:
-                  <?php 
-                   if($row9['0'] > $row11['0']){
-                          echo$row9['0'];       
-                   }else{
-                       echo$row11['0'];
-                   }
-                   ?>
-                </h3>
-
-                <p>
-                  <b>El zapato mas vendido</b><br>
-                  <?php 
-                   if($row9['0'] > $row11['0']){
-                        $consulta12 = "SELECT Nombre from productos WHERE ID_Productos = {$row8['0']}";
-                        $resultado12 = mysqli_query($conexion,$consulta12);
-                        $row12 = $resultado12->fetch_array();
-                        echo $row12['0'];           
-                   }else{
-                        $consulta12 = "SELECT Nombre from productos WHERE ID_Productos = {$row10['0']}";
-                        $resultado12 = mysqli_query($conexion,$consulta12);
-                        $row12 = $resultado12->fetch_array();
-                        echo $row12['0'];
-                   }
-                  ?>
-                </p>
-              </div>
-              <div class="icon">
-                <i class="fas fa-shoe-prints"></i>
-              </div>
-            </div>
-          </div> <!-- ./col -->
+          
 
 
           <div class="col-lg-6 col-6 ">
@@ -114,11 +62,14 @@
                 </div>
               </div>
               <div class="card-body">
+
                 <div class="d-flex">
+
                   <p class="d-flex flex-column">
                     <span class="text-bold text-lg">$<?php echo $row13['0']; ?></span>
                     <span>Ventas del año 2021</span>
                   </p>
+
                   <p class="ml-auto d-flex flex-column text-right">
                     <p class="d-flex flex-column">
                     <span class="text-bold text-lg">$<?php echo $row14['0']; ?></span>
@@ -144,7 +95,7 @@
                 <!-- /.d-flex -->
 
                 <div class="position-relative mb-4">
-                  <canvas id="sales-chart" height="200"></canvas>
+                  <canvas id="sales-chart" style="" height="200"></canvas>
                 </div>
 
                 <div class="d-flex flex-row justify-content-end">
@@ -242,7 +193,64 @@
                 <i class="fas fa-tags"></i>
               </div>
             </div>
+
           </div><!-- ./col -->
+          <!-- sdfs -->
+          <div class="col-lg-3 col-6"><!--1-->
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>
+                  Ventas :
+                  <?php 
+                    consulta($valor1 = 'COUNT(ID_venta)',$valor2 ='venta',$conexion);
+                  ?>                
+                </h3>
+
+                <p>Ventas Totales</p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-shopping-basket"></i>
+              </div>
+              <a href="data_ventas.php" class="small-box-footer">Ir a las ventas <i class="fas fa-arrow-circle-right"></i></a>
+            </div>
+            <!-- small box -->
+            <div class="small-box bg-success">
+              <div class="inner">
+                <h3>Ventas:
+                  <?php 
+                   if($row9['0'] > $row11['0']){
+                          echo$row9['0'];       
+                   }else{
+                       echo$row11['0'];
+                   }
+                   ?>
+                </h3>
+
+                <p>
+                  <b>El zapato mas vendido</b><br>
+                  <?php 
+                   if($row9['0'] > $row11['0']){
+                        $consulta12 = "SELECT Nombre from productos WHERE ID_Productos = {$row8['0']}";
+                        $resultado12 = mysqli_query($conexion,$consulta12);
+                        $row12 = $resultado12->fetch_array();
+                        echo $row12['0'];           
+                   }else{
+                        echo consultaConWhere("Nombre","productos","ID_Productos = {$row10['0']}",$conexion);
+                        $consulta12 = "SELECT Nombre from productos WHERE ";
+                        $resultado12 = mysqli_query($conexion,$consulta12);
+                        $row12 = $resultado12->fetch_array();
+                        echo $row12['0'];
+                   }
+                  ?>
+                </p>
+              </div>
+              <div class="icon">
+                <i class="fas fa-shoe-prints"></i>
+              </div>
+            </div>
+          </div> <!-- ./col -->
+
 
           <div class="col-lg-8">
             <div class="card">
@@ -504,12 +512,13 @@
 <script src="dist/js/demo.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script >
-    $(function () {
+
+    $(function tiempoReal () {
     'use strict'
 
     var ticksStyle = {
-      fontColor: '#495057',
-      fontStyle: 'bold'
+      fontColor: '#FFFFFF',
+      fontStyle: '400' //Grosor del texto
     }
 
     var mode = 'index'
@@ -580,7 +589,7 @@
         }
       }
     })
-
+      setInterval(tiempoReal,5000);
     var $visitorsChart = $('#visitors-chart')
     // eslint-disable-next-line no-unused-vars
     var visitorsChart = new Chart($visitorsChart, {

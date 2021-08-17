@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">	
+	<title>Ventas</title>
+	<link rel="shortcut icon" href="assets/img/logo_1.png">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body class="">	
+		<!-- Image and text -->
+	<nav class="navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">
+			<img src="assets/img/logo_1.png" width="30" height="30" class="d-inline-block align-top" alt="">
+		    <i class="bi bi-chevron-left"></i>
+		    Venta de Calzado
+		    <i class="bi bi-chevron-right"></i>
+		</a>
+		<a  class="navbar-brand btn btn-outline-dark" href="colaborador.html" role="button">Colaboradores <i class="bi bi-people"></i></a>
+
+
+	  	<button class="navbar-brand btn btn-success" data-toggle="modal" data-target="#add_new_record_modal">Hacer Venta 
+	  		<i class="bi bi-bag-plus"></i>
+	  	</button>
+	</nav>
+
+	<div class="container" >
+	
+		<section id="Tabla"></section>
+
+	</div>
+
+	<!-- Bootstrap Modal --> 
+
+	<!-- Modal - Add New Record/User -->
+	<div class="modal fade" id="add_new_record_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	   
+	      <div class="modal-header">
+	        <h5 class="modal-title">Venta</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      
+	      <div class="modal-body">
+	        <div class="form-group">
+	          <label for="Cod ALumno">Total</label>
+	          <input type="text" id="total" value="" class="form-control"/>
+	        </div>
+	        <div class="form-group">
+	          <label for="CodMatri">Colaborador</label>
+	          <input type="text" id="colaborador" class="form-control" value=""/>
+	        </div>
+	        
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default"  data-dismiss="modal">Cancelar</button>
+	        <button type="button" class="btn btn-primary" onclick="AgregarVenta()">Agregar</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	<!-- // Modal -->
+
+	<!-- Modal - Update User details -->
+	<div class="modal fade" id="update_user_modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	   
+	      <div class="modal-header">
+	        <h5 class="modal-title">Actualizar</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div> 
+	      
+	      
+	      <div class="modal-body">
+	      	<div class="form-group">
+	          <label for="id_alumno">ID</label>
+	          <input  type="text" id="Update_Id" value=""  class="form-control" disabled/>
+	        </div>
+	        <div class="form-group">
+	          <label for="id_alumno">Total</label>
+	          <input  type="text" id="Update_total" value=""  class="form-control"/>
+	        </div>
+	        <div class="form-group">
+	          <label for="Cod ALumno">Fecha</label>
+	          <input type="text" id="Update_fecha" value="" class="form-control" disabled/>
+	        </div>
+	        <div class="form-group">
+	          <label for="CodMatri">Colaborador</label>
+	          <input type="text" id="Update_colaborador" class="form-control" value=""/>
+	        </div>
+	        
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+	        <button type="button" class="btn btn-primary" onclick="ActualizarUsuario()" >Guardar Cambios</button>
+	        <input type="hidden" id="hidden_user_id">
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- // Modal --> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/funcionesVentas.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -94,26 +94,7 @@
                   </tbody>
           
                 </table>
-            
-                                   <div class="modal fade" id="modal-lg">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h4 class="modal-title">Productos</h4>
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
-                      <div class="modal-body">
-                        <p>One fine body&hellip;</p>
-                      </div>
-                    </div>
-                    <!-- /.modal-content -->
-                  </div>
-                  <!-- /.modal-dialog -->
-                </div>    
-              
- 
-                <!-- /.modal -->
-    
+          
               </div>
               <!-- /.card-body -->
             </div>

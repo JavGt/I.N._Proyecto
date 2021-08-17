@@ -84,7 +84,7 @@
           
                 </table>
             
-                                   <div class="modal fade" id="modal-lg">
+                <div class="modal fade" id="modal-lg">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -155,7 +155,7 @@
 
 <!-- Page specific script -->
 <script>
-  $(function () {
+  $(function  () {
     $("#example1").DataTable({
       "responsive": true, "lengthChange": false, "autoWidth": false,
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]

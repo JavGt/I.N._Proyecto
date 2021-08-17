@@ -7,13 +7,28 @@
      $day_anterior = date("d")-13;
 
 
-	// -----------Consultas-----------
+	// -----------Consultas basicas -----------
      function consulta($valor1,$valor2,$conexion){
           $consulta = "SELECT {$valor1} FROM {$valor2}";
           $resultado = mysqli_query($conexion,$consulta);
           $row = $resultado->fetch_array();
-          echo $row['0'];
+          echo($row[0]);
+
      }
+
+     // -----------Consultas con where -----------
+      function consultaConWhere($dato1,$dato2,$dato3,$conexion){
+          $consulta = "SELECT {$dato3} FROM {$dato2} WHERE {$dato3} ";
+          return $resultado = mysqli_query($conexion,$consulta);
+     }
+
+     function consultaConInnerJoin($dato1,$dato2,$dato3,$conexion){
+          $consulta = "SELECT {$dato1} FROM {$dato2} INNER JOIN {$dato3}";
+          $resultado = mysqli_query($conexion,$consulta);
+          return $resultado;
+
+     }
+
 
      // Consulta para los descuentos
      $consulta = "SELECT * FROM `productos` WHERE Descuento > 0";
@@ -43,8 +58,12 @@
      $row6 = $resultado6->fetch_array();
 
       // Consulta para mostrar todos
-     $consulta7 = "SELECT * FROM productos INNER JOIN proveedor,categoria,edad WHERE productos.ID_Proveedor = proveedor.ID_Proveedor AND productos.ID_Categoria = categoria.ID_Categoria AND productos.ID_Edad = edad.ID_Edad";
-     $resultado7 = mysqli_query($conexion,$consulta7);
+     $resultado7 = mysqli_query($conexion, $consulta7 = 
+          "SELECT * FROM productos 
+          INNER JOIN proveedor,categoria,edad 
+          WHERE productos.ID_Proveedor = proveedor.ID_Proveedor 
+          AND productos.ID_Categoria = categoria.ID_Categoria 
+          AND productos.ID_Edad = edad.ID_Edad");
 
      //Saber el Producto que mas se repite en la lista
      $consulta8 = "SELECT ID_Productos FROM detalles_venta GROUP BY ID_Productos HAVING COUNT(*)>1";
